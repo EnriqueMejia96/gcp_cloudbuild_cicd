@@ -20,6 +20,7 @@ steps:
       - devops-app-vm
       - --zone=us-central1-a
       - --container-image=${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_IMAGE}:${COMMIT_SHA}
+      - --container-env=PORT=80
 
 images:
   - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_IMAGE}:${COMMIT_SHA}'
